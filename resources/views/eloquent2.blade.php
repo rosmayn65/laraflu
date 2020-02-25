@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-@foreach ($mahasiswa as $data)
+    @foreach ($mahasiswa as $data)
     <h3> {{$data->nama}}</h3>
     <h5>Hobi :
         @foreach ($data->hobi as $val)

@@ -95,3 +95,27 @@ Route::get('eloquent2',function(){
     $mahasiswa = Mahasiswa::where('nama','=','Ilham Ramdani')->get();
     return view('eloquent2',compact('mahasiswa'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Blade Template
+Route::get('beranda',function()
+{
+    return view('beranda');
+});
+
+Route::get('tentang',function()
+{
+    return view('tentang');
+});
+
+Route::get('kontak',function()
+{
+    return view('kontak');
+});
+
+//CRUD
+Route::resource('dosen','DosenController');
