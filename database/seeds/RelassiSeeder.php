@@ -6,7 +6,6 @@ use App\Mahasiswa;
 use App\Wali;
 use App\Hobi;
 
-
 class RelassiSeeder extends Seeder
 {
     /**
@@ -69,22 +68,22 @@ class RelassiSeeder extends Seeder
         //membuat data hobi
 
         $mancing = Hobi::create([
-            'hobi' => 'Mancing Sendal'
+            'hobi' => 'Mancing Lele'
         ]);
 
-        $menari = Hobi::create([
-            'hobi' => 'Jaipongan'
+        $karatee = Hobi::create([
+            'hobi' => 'Karate'
         ]);
 
         $eat = Hobi::create([
-            'hobi' => 'Makan Jantung'
+            'hobi' => 'Makan Seblak'
         ]);
 
         //menampilkan hobi ke mahasiswa
 
         $ilham->hobi()->attach($mancing->id);
         $ilham->hobi()->attach($eat->id);
-        $aseu->hobi()->attach($menari->id);
+        $aseu->hobi()->attach($karatee->id);
         $zyan->hobi()->attach($eat->id);
         $this->command->info('Data Hobi Mahasiswa Berhasil dibuat');
     }
