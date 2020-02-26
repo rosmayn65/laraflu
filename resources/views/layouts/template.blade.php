@@ -12,7 +12,7 @@
     @include('layouts.nav')
     {{-- End Nav --}}
 
-    @yield('konten') //memberikan ruang kosong yg bisa diisi oleh section
+    @yield('konten')
 
     <footer>Latihan Blade Templating</footer>
 </body>
